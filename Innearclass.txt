@@ -1,0 +1,18 @@
+1.innear class is defined in another class
+  -封装性好，在其他类里不能使用
+2. private static innear class
+  -不再是每个object都有一个内部类了，而是共用一个
+  -不能使用外部类非静态属性方法了，因为已经是独立的了
+  -如果不用private，封装性消失了，可以在其他类使用
+  
+  
+  Local class
+    -定义在方法里的类
+    -出了方法就用不了了
+    -可以访问方法里的局部变量
+    -不能修改局部变量，因为局部类把局部变量默认当做final使用，如果局部变量不是final，不能访问
+    
+    Anonymous class
+      -comparator interface
+      
+      -
