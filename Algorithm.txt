@@ -1,0 +1,70 @@
+Binary tree
+  1.求max depth 
+  用递归： int left = maxPathSum(root.left);
+          int right = maxPathSum(root.right);
+          return Math.max(left,right) + 1;
+          
+  2.求max value through a path in a tree     -1      return -1
+                                           -2  -3
+          public int maxPathSum(TreeNode root) 
+          if(root = null){
+            return Integer.MIN_VALUE;//负无穷大  因为找不到包含点的路径，如果求最小值return Integer.MAX_VALUE 
+          }
+          int left = maxPathSum(root.left);
+          int right = maxPathSum(root.right);
+          if(Math.max(right,left) < 0){
+            return root.value;
+          }
+          else{
+            return Math.max(right,left) + root.value;
+          }
+          //或者更简单的写法
+          return Math.max(Math.max(left,right),0) + root.value;
+          
+          
+    3.从任意节点出发到任意节点结束：          -3
+                                        -2     -1     return max return -1
+      1. 全在左边
+      2.全在右边
+      3.至少包含根节点
+          分为3部分
+          1.左边根节点到任意点
+          2.根节点
+          3。右边根节点到任意点
+       类似于上一题，所以需要两个值， root2any 和 any2any
+       private class ResultType{
+        int root2any, any2any;
+        ResultType(int root2any,int any2any){
+          this.any2any = any2any;
+          this.root2any = root2any;
+        }
+       }
+       private ResultType helper(TreeNode root){
+        if(root == null){
+          return new ResultType(Integer.MIN_VALUE,Integer.MIN_VALUE);
+         }
+       }
+       //Divide
+       ResultType left = helper(root.left)// 求得左边的root2any 和any2any
+       ResultType right = helper(root.right)//求得右边的
+       //conquer
+       //求得当前的点
+       int root2any = Math.max(0,Math.max(left.root2any,right.root2any)) + root.value
+       int any2any = Math.max(left.any2any,right.any2any);//在左边或右边
+       any2any = Mathmax(any2any,
+       Math.max(left.root2any,0) + root.value + Math.max(right.root2any,0));
+       return new ResultType(root2any, any2any);
+       public int maxPathSum(TreeNode node){
+        ResultType result = helper(root);
+        return result.any2any;
+       }
+       
+  4.Binary Search Tree
+    1.左子树 < root
+    2.right > root
+    3. in- order traversal 升序
+    4.in-order 不是升序的一定不是BST
+    5.中序遍历是升序不一定是BST
+       
+      
+      
