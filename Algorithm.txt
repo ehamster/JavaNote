@@ -1,4 +1,74 @@
 Binary tree
+  0.preorder traverse:
+    思想：one tree is composed of 3 part: root, all left, all right;
+    一棵树可以看成只有一个当前点，其他所有子节点都是左或者右孩子。
+    所以preorder分3步：
+      1. root 入stack判断非空
+      2. 右孩子入栈
+      3. 左孩子入栈
+        public List<Integer> preorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> preorder = new ArrayList<Integer>();
+        
+        if (root == null) {
+            return preorder;
+        }
+        
+        stack.push(root);
+        while (!stack.empty()) {
+            TreeNode node = stack.pop();
+            preorder.add(node.val);
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+        
+        return preorder;
+    }
+    
+   inorder:
+   
+   1.找到最左边的点，过程中将所有点入Stack，返回并指向右孩子
+   2.返回到他的父节点，返回并指向右孩子，
+   循环
+   public ArrayList<Integer> inorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        TreeNode curt = root;
+        while (curt != null || !stack.empty()) {
+            while (curt != null) {
+                stack.add(curt);
+                curt = curt.left;
+            }
+            curt = stack.peek();
+            stack.pop();
+            result.add(curt.val);
+            curt = curt.right;
+        }
+        return result;
+    }
+    postOrder:
+    public List<Integer> postorderTraversal(TreeNode root) {
+	LinkedList<Integer> ans = new LinkedList<>();
+	Stack<TreeNode> stack = new Stack<>();
+	if (root == null) return ans;
+	
+	stack.push(root);
+	while (!stack.isEmpty()) {
+		TreeNode cur = stack.pop();
+		ans.addFirst(cur.val);
+		if (cur.left != null) {
+			stack.push(cur.left);
+		}
+		if (cur.right != null) {
+			stack.push(cur.right);
+		} 
+	}
+	return ans;
+}
   1.求max depth 
   用递归： int left = maxPathSum(root.left);
           int right = maxPathSum(root.right);
