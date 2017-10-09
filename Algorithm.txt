@@ -72,9 +72,10 @@ Binary tree非递归
 	}
 	return ans;
 }
-递归的方法 1.traverse（ 一个人干活））
-以前序遍历为例子：
-3要素： 
+递归的方法
+1.traverse（ 一个人干活））
+	以前序遍历为例子：
+		3要素： 
 	1.递归的定义：把root为根的前序遍历放进result  traverse(TreeNode root, ArrayList result){}//假设已经做好了
 	2.递归的拆分：穿进去的参数越来越小
 	3.递归的出口：结束条件（判断root == null）能解决大多问题
@@ -82,11 +83,13 @@ Binary tree非递归
 	1.递归的定义：求出root为根的preorder并return
 	2.递归的拆分：
 	3.递归的出口：
+	
+	
   1.求max depth 
   用递归： int left = maxPathSum(root.left);
           int right = maxPathSum(root.right);
           return Math.max(left,right) + 1;
-   
+   balanced binary tree: Left tree is balanced, right tree is balanced and heigh difference <= 1
   
   2.求max value through a path in a tree     -1      return -1
                                            -2  -3
@@ -151,5 +154,5 @@ Binary tree非递归
     5.中序遍历是升序不一定是BST
        
    
-   5. lowest common ancestor
-    
+   5. lowest common ancestor 二叉树
+    问题先给left做，再给right做，别自己做
