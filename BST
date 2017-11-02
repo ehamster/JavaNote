@@ -1,0 +1,7 @@
+左比根小
+右比根大
+in order is ascend
+
+ 1                    1
+1  1 不是bst        1   2   是BST  相等只能在一边
+
