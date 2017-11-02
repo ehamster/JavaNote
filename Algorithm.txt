@@ -168,3 +168,12 @@ Binary tree非递归
          * 同时，我们根据算出来的当前树的average决定要不要更新result。
          * 当遍历完整棵树的时候，
          * result里记录的就是拥有最大average的子树的信息。*/
+7. Binary Tree Maximum Path Sum 
+Given a binary tree, find the maximum path sum.
+
+The path may start and end at any node in the tree.
+
+两种情况：1.左子树里或者右子树里
+2.包裹了root
+
+但是为了计算第二种情况，仅仅使用any2any还不够，因为是一条路，root不能和any2any连接，so，need anyother variable : root2any
