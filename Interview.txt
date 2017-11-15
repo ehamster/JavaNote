@@ -26,4 +26,25 @@ Analyse a system:
 6.talk to people
 7.write summary
 
+PageRank：
+
+A refers to 3 pages
+value 
+one page donot refer to any page weight is 0  : dead ends
+result is 【0,0,0,0,0】
+pr(N) = pr(n-1)(1-B) * transition matix + B*pr(n-1) 
+B = 0.2
+spider traps: c refer to c result  [0,0,1,0,0,0]
+
+HITS：
+initial value hub and autority for every page is 1
+a(i) = sum(h(i))
+h(i) = sum(a(i))
+
+a(i) / hightsest a
+h(i) / hightest h
+知道不变化
+
+
+R:
 
