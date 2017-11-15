@@ -17,3 +17,13 @@ JavaServer Faces (JSF):
 4.Java Development Kit (JDK) is for development purpose and JVM is a part of it to execute the java programs.
 5.Java Runtime Environment (JRE) is the implementation of JVM.
 
+Analyse a system:
+1.Starting with a good attitude will also help you in talking to people on the project later on.
+2.Document :, collect Question 
+3.Start with the data,run
+4.Find core point .Make a list of the technologies used
+5.read some code
+6.talk to people
+7.write summary
+
+
