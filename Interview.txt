@@ -1,0 +1,19 @@
+COBOL:  common business oriented language
+CICS其全称是 Customer Information Control System
+
+J2ee  java enterprise edition
+java 9 Java 9’s modularity let developers more easily maintain applications
+
+Enterprise JavaBeans (EJB): is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that 
+
+JDBC java database connectivity technology
+This technology is an API for the Java programming language that defines how a client may access a database.
+It provides methods for querying
+
+JavaServer Faces (JSF):  
+
+2.Platform independence means that you can run the same Java Program in any Operating System.
+3. JVM is responsible for converting byte code into machine readable code. JVM is not platform independent,
+4.Java Development Kit (JDK) is for development purpose and JVM is a part of it to execute the java programs.
+5.Java Runtime Environment (JRE) is the implementation of JVM.
+
