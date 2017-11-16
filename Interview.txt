@@ -86,3 +86,11 @@ android多线程
 3)Handler
 
 4)AsyncTask
+
+
+Accuracy is how close a measured value is to the actual (true) value. 
+Precision 
+Precision is how close the measured values are to each other. 
+
+RF is for classfication
+logistic reg is category outcome binary
