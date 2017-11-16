@@ -77,7 +77,12 @@ h(i) = sum(a(i))
 a(i) / hightsest a
 h(i) / hightest h
 知道不变化
+android多线程
 
+1)Activity.runOnUiThread(Runnable)
 
-R:
+2)View.post(Runnable) ;View.postDelay(Runnable , long)
 
+3)Handler
+
+4)AsyncTask
