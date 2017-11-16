@@ -6,31 +6,34 @@ application servers that provide online transaction management
 J2ee  java enterprise edition
 java 9 Java 9’s modularity let developers more easily maintain applications
 
-Enterprise JavaBeans (EJB): is one of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that 
+Enterprise JavaBeans (EJB): is one of several Java APIs for modular construction EJB is a server-side software component that 
 
 JDBC java database connectivity technology  API
 This technology is an API for the Java programming language that defines how a client may access a database.
 It provides methods for querying
 
 JavaServer Faces (JSF):  
-MVC web framework that simplifies construction of user interfaces 
+MVC web framework that used for user interfaces 
 IBM Content Manager：
-Content Manager enables you to easily manage your growing volume of enterprise content 
+manage your growing volume content 
 
 RSA:
-RSA (Rivest–Shamir–Adleman)) is one of the first practical public-key cryptosystems and is widely used for secure data transmission.
+RSA (Rivest–Shamir–Adleman)) is one of the public-key for secure data transmission.
 
 WebSphere :
-IBM WebSphere refers to a brand of computer software products in the genre of enterprise software known as "application and integration middleware". These software products are used by end-users to create applications and integrate applications with other applications. 
+IBM WebSphere refers to a brand of computer software products 。create applications and integrate applications with other applications. 
 
 
 web services:
-A Web service, in very broad terms, is a method of communication between two applications or electronic devices over the World Wide Web (WWW). Web services are of two kinds: Simple Object Access Protocol (www)
+is a method of communication between two applications  over the World Wide Web (WWW). 
 
 IBM Db2
 relational model， also support no relational model
+.NET 
+a open source developer platform for building many different types of applications.
+
 ASP.NET
-a frameworl for web development to produce dynamic web pages
+a framework for web development to produce dynamic web pages
 
 BPM (Business Process Management) is a business solution approach which views a business as a set of processes or workflows
 C#
