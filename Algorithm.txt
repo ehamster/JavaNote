@@ -159,7 +159,7 @@ Binary tree非递归
        
   4.Binary Search Tree
     1.左子树 < root
-    2.right > root
+    2.right >= root
     3. in- order traversal 升序
     4.in-order 不是升序的一定不是BST
     5.中序遍历是升序不一定是BST
