@@ -188,3 +188,7 @@ The path may start and end at any node in the tree.
 2.包裹了root
 
 但是为了计算第二种情况，仅仅使用any2any还不够，因为是一条路，root不能和any2any连接，so，need anyother variable : root2any
+
+
+BFS
+
