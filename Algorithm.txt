@@ -192,3 +192,13 @@ The path may start and end at any node in the tree.
 
 BFS
 
+
+使用：图遍历：1.层级遍历2.由点到面3.拓扑排序
+最短路径问题：1.简单图求最短路径（边长为1没方向）
+最长路径不能用BFS
+
+二叉树的BFS：
+1.起点丢到队列里（Queue）
+2.while(Q不空) {
+	for循环当前层所有节点，现将当前层节点删掉，再将所有子节点放进Queue里面去
+}
