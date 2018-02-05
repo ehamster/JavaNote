@@ -1,3 +1,7 @@
+局部变量和参数，定义出来的放在stack里面
+TreeNode node = new TreeNode(10)
+node在stack，new出来的在heap
+
 根据时间复杂度倒退算法：
 O(1) 极少
 O(logn) 二分法
@@ -191,14 +195,54 @@ The path may start and end at any node in the tree.
 
 
 BFS
-
+能用BFS就就BFS，别用DFS，因为会stack over flow，如果深度太深。
+因为BFS用的是heap空间，虽然BFS更耗空间，但是heap很大。 DFS耗费的是stack空间，只有8M很小
 
 使用：图遍历：1.层级遍历2.由点到面3.拓扑排序
 最短路径问题：1.简单图求最短路径（边长为1没方向）
 最长路径不能用BFS
 
-二叉树的BFS：
+二叉树的BFS：  时间复杂度O(E) E就是边 在二叉树里因为点和边一样多，所以是O(n)
 1.起点丢到队列里（Queue）
+Queue.isEmpty()  Queue.size()  Queue.poll()  Queue.offer() 记住
+因为queue的size会变，所以记住用size = Queue.size()先保存下来再循环
 2.while(Q不空) {
 	for循环当前层所有节点，现将当前层节点删掉，再将所有子节点放进Queue里面去
 }
+
+二叉树序列化 #代表空的位置
+判断可能重复进入队列的点，用hashmap
+
+用这样的来表示图的一个点 Map<Integer,Set<Integer>> graph = new HashMap<>();//Set就是只有key没有value
+
+判断图是否是树的问题：首先树的定义：边比点小1，点都联通。
+所以可以用BFS，从一个点开始，看是否能找到所有的点
+1.先用HashMap来表示这个图 Map<Integer,Set<Integer>> graph = new HashMap<>()
+private Map<Integer,Set<Integer>> initialGraph(int n, int[][] edges) {
+        Map<Integer,Set<Integer>> result = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            result.put(i,new HashSet<Integer>());//所有点加进去
+        }
+        for (int i = 0; i < edges.length; i++) {//每一个边遍历，将邻居加进去
+          bian  int u = edges[i][0];
+            int v = edges[i][1];
+            result.get(u).add(v);
+            result.get(v).add(u);
+        }
+        return result;
+    }
+
+2.判断满足条件： 
+ if (n == 0 || n - edges.length != 1) {
+            return false;
+        }
+	
+3.用queue存放即将被检查的点
+用HashSet存放连接着的点
+
+4.最后检查HashSet的size是不是和n一样，一样则说明是tree
+
+
+硬拷贝一个图：
+
+	
