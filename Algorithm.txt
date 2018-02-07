@@ -194,7 +194,8 @@ The path may start and end at any node in the tree.
 但是为了计算第二种情况，仅仅使用any2any还不够，因为是一条路，root不能和any2any连接，so，need anyother variable : root2any
 
 
-BFS
+BFS   重点： 用queue存放即将被检查的点。用HashSet存放已经连接着的点
+					
 能用BFS就就BFS，别用DFS，因为会stack over flow，如果深度太深。
 因为BFS用的是heap空间，虽然BFS更耗空间，但是heap很大。 DFS耗费的是stack空间，只有8M很小
 
@@ -243,6 +244,34 @@ private Map<Integer,Set<Integer>> initialGraph(int n, int[][] edges) {
 4.最后检查HashSet的size是不是和n一样，一样则说明是tree
 
 
-硬拷贝一个图：
+Topological sorting
+有向图，
+不用DFS的做法，用BFS的做法
+1.把入度为0的点丢到待学习的空间中
+2.相邻的点入度更新
 
+所以先要用HashMap统计每个点的入度
+然后把没有入度的点放到queue
+遍历queue，把点拿出来放到result里，所有邻居入度-1，减到0的时候加到queue里
+
+看下result长度和graph长度是否相等，相等说明拿完了，不相等说明不能做完拓扑排序。
+
+
+
+矩阵中宽度优先搜索：
+
+图： N点M个边
+M最大是N**2
+时间复杂度是O(N+M) 一般M更大
+
+矩阵：
+R行C列
+R*C个点 O(R*C*2)个边，因为一个点上下左右4边，每个边被两个点共享
+时间复杂度O(R*C)
 	
+数岛屿用灌水法，把他和相连的1都变成0
+看你灌水几次就是几个岛屿
+
+僵尸问题需要层级遍历
+需要两句话： int size = queue.size();
+for (int i = 0; i < size; i ++)
