@@ -275,3 +275,13 @@ R*C个点 O(R*C*2)个边，因为一个点上下左右4边，每个边被两个�
 僵尸问题需要层级遍历
 需要两句话： int size = queue.size();
 for (int i = 0; i < size; i ++)
+
+DFS
+1.Resursion
+2.combination
+3.permutation
+4.Graph
+5.Non-Recusion
+
+什么时候用：
+求所有组合的时候，90%是2 或者3
